@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Hero() {
     return (
@@ -16,17 +17,19 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 md:px-8 relative z-10">
         <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Reverse Diseases With a Simple Diet Plan
+          <h1 className="text-2xl md:text-4xl font-bold mb-6 text-white">
+            Reverse Diseases With a<br /> <span className="text-secondary">Simple Diet Plan</span>
           </h1>
-          <p className="text-lg mb-8 text-white/90">
-            Get the perfect meal plan that helps you achieve your health goals
+          <p className="text-sm sm:text-base mb-8 text-white/90">
+          We offer personalized meal plans and medically tailored foods to help you take back your health.
           </p>
-          <button className="bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition">
-            Get Started
+          <Link href='https://cookedindoors.bumpa.shop'>
+          <button className="bg-primary text-sm cursor-pointer text-white px-10 py-2 rounded-md hover:bg-primary/90 transition">
+            Order a Meal Kit
           </button>
+          </Link>
         </div>
       </div>
     </section>

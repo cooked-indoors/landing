@@ -13,31 +13,31 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/sito-logo.png"
-            alt="Sito Logo"
-            width={80}
-            height={32}
-            className="h-8 w-auto"
+            src="/logo.png"
+            alt="cookedindoors Logo"
+            width={50}
+            height={50}
+            // className='w-auto'
           />
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-4">
           <Link 
-            href="/meal-plan" 
-            className="text-gray-700 hover:text-gray-900"
+            href="#" 
+            className="text-primary"
           >
             Buy a Meal Plan
           </Link>
           <Link 
-            href="/consultation" 
-            className="text-orange-500 border border-orange-500 rounded-full px-6 py-2 hover:bg-orange-50"
+            href="#" 
+            className="text-primary border border-primary rounded-md px-6 py-2 hover:bg-primary/10"
           >
             Consult a Dietitian
           </Link>
           <Link 
-            href="/meal-kit" 
-            className="bg-orange-500 text-white rounded-full px-6 py-2 hover:bg-orange-600"
+            href="https://cookedindoors.bumpa.shop" 
+            className="bg-primary text-white rounded-md px-6 py-2 hover:bg-primary/90"
           >
             Order a Meal Kit
           </Link>
@@ -49,11 +49,11 @@ export default function Navbar() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 cursor-pointer" fill="none" stroke="blue" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 cursor-pointer" fill="none" stroke="blue" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           )}
@@ -63,20 +63,20 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-white p-6 shadow-lg md:hidden flex flex-col gap-4">
             <Link 
-              href="/meal-plan" 
-              className="text-gray-700 hover:text-gray-900 py-2"
+              href="#" 
+              className="text-primary font-medium py-2"
             >
               Buy a Meal Plan
             </Link>
             <Link 
-              href="/consultation" 
-              className="text-orange-500 border border-orange-500 rounded-full px-6 py-2 text-center hover:bg-orange-50"
+              href="#" 
+              className="text-primary border border-primary rounded-md px-6 py-2 hover:bg-primary/10"
             >
               Consult a Dietitian
             </Link>
             <Link 
-              href="/meal-kit" 
-              className="bg-orange-500 text-white rounded-full px-6 py-2 text-center hover:bg-orange-600"
+              href="https://cookedindoors.bumpa.shop" 
+              className="bg-primary text-white rounded-md px-6 py-2 hover:bg-primary/90"
             >
               Order a Meal Kit
             </Link>
